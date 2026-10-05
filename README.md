@@ -1,6 +1,6 @@
 # Hanna's Beat
 
-A little website I made for Hanna's aersome Honda Beat. It has pictures of her car and her two cats (Ahna and Blu), mod ideas (performance, cosmetic, cute stuff and cat stuff) with pictures and rough prices, a few themed looks you can add in one click, parts for sale that ship to the US, a list of every site I found that sells Beat parts, and Honda Beat news. There's also a list where you can add stuff and check it off.
+A little website I made for Hanna's awesome Honda Beat. It has pictures of her car and her two cats (Ahna and Blu), mod ideas (performance, cosmetic, cute stuff and cat stuff) with pictures and rough prices, a few themed looks you can add in one click, parts for sale that ship to the US, a list of every site I found that sells Beat parts, and Honda Beat news. There's also a list where you can add stuff and check it off.
 
 It runs on your own computer, nothing is hosted anywhere.
 
