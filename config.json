@@ -1,0 +1,7 @@
+{
+  "name": "Hanna",
+  "port": 1991,
+  "openBrowser": true,
+  "autoRefreshHours": 24,
+  "listingsPerSearch": 20
+}

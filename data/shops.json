@@ -1,0 +1,97 @@
+[
+  {
+    "id": "ebay",
+    "name": "eBay",
+    "where": "US sellers",
+    "tags": ["Aftermarket", "Used", "OEM", "Cosmetic"],
+    "about": "Biggest selection of Beat parts in the US. The parts section above pulls from here once eBay is connected.",
+    "home": "https://www.ebay.com/sch/i.html?_nkw=honda+beat&LH_PrefLoc=1",
+    "search": "https://www.ebay.com/sch/i.html?_nkw={q}&LH_PrefLoc=1"
+  },
+  {
+    "id": "pp1beat",
+    "name": "PP1 Beat",
+    "where": "Toronto, Canada. Ships to the US with no duties",
+    "tags": ["Beat only", "Maintenance", "Exhaust"],
+    "about": "A whole store just for the Beat. Mostly maintenance stuff like timing belt kits, brakes, filters and radiators, plus J-Works and Giga N1 mufflers. Free shipping over $350.",
+    "home": "https://pp1beat.com",
+    "search": "https://pp1beat.com/search.php?search_query={q}"
+  },
+  {
+    "id": "etsuryu",
+    "name": "EtsuRyu",
+    "where": "Japan. Ships internationally",
+    "tags": ["Kei specialist", "Aftermarket", "Kits"],
+    "about": "Small shop that does kei cars (Beat, Cappuccino, AZ-1). Has a PP1 section with repair kits and some rare stuff like Kamimura velocity stacks.",
+    "home": "https://www.etsuryu.com/product-category/honda/pp1-beat",
+    "search": "https://www.etsuryu.com/?s={q}&post_type=product"
+  },
+  {
+    "id": "nengun",
+    "name": "Nengun Performance",
+    "where": "Japan. Ships to the US",
+    "tags": ["Aftermarket", "OEM"],
+    "about": "Big Japanese performance parts store. Has aftermarket parts and genuine Honda parts for the Beat.",
+    "home": "https://www.nengun.com/honda/beat-pp1-110"
+  },
+  {
+    "id": "rhdjapan",
+    "name": "RHDJapan",
+    "where": "Japan. Ships worldwide",
+    "tags": ["Aftermarket", "Exhaust", "Suspension"],
+    "about": "Japanese aftermarket parts like exhausts, suspension and aero, shipped from Japan.",
+    "home": "https://www.rhdjapan.com/search?q=honda+beat",
+    "search": "https://www.rhdjapan.com/search?q=honda+beat+{q}"
+  },
+  {
+    "id": "amayama",
+    "name": "Amayama",
+    "where": "Japan and UAE. Ships worldwide",
+    "tags": ["OEM"],
+    "about": "Genuine Honda parts catalog. Good for seals, trim, lights and other original parts. Honda has started remaking some Beat parts too.",
+    "home": "https://www.amayama.com/en/genuine-catalogs/honda/beat"
+  },
+  {
+    "id": "redline360",
+    "name": "Redline360",
+    "where": "US",
+    "tags": ["Aftermarket"],
+    "about": "US performance parts store. They carry the CUSCO front strut bar made for the Beat.",
+    "home": "https://shop.redline360.com/search?q=honda+beat"
+  },
+  {
+    "id": "etsy",
+    "name": "Etsy",
+    "where": "Lots of US sellers",
+    "tags": ["Stickers", "Cosmetic", "Cat stuff"],
+    "about": "Stickers, decals, keychains, custom shift knobs and cat everything. You can filter by shop location.",
+    "home": "https://www.etsy.com/search?q=honda+beat",
+    "search": "https://www.etsy.com/search?q={q}"
+  },
+  {
+    "id": "sanrio",
+    "name": "Sanrio",
+    "where": "US. The official store",
+    "tags": ["Hello Kitty", "Kuromi", "Plushies"],
+    "about": "Sanrio's own store. Plushies, keychains and accessories for Hello Kitty, Kuromi, My Melody and the rest. Not much made for cars, but lots for the dashboard.",
+    "home": "https://www.sanrio.com",
+    "search": "https://www.sanrio.com/search?q={q}"
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "where": "US",
+    "tags": ["Cosmetic"],
+    "about": "Generic cosmetic stuff that isn't Beat specific: LED bulbs, interior lights, seat covers, valve caps, tow straps.",
+    "home": "https://www.amazon.com",
+    "search": "https://www.amazon.com/s?k={q}"
+  },
+  {
+    "id": "metro",
+    "name": "Metro Restyling",
+    "where": "US",
+    "tags": ["Wrap film"],
+    "about": "Vinyl wrap film from 3M, Avery and others. It's where a lot of wrap shops buy their film.",
+    "home": "https://metrorestyling.com"
+  }
+]

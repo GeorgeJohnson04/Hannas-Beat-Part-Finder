@@ -1,0 +1,50 @@
+[
+  {
+    "id": "black-cat",
+    "name": "Ahna",
+    "about": "Black with a little green, like Ahna's eyes. A bit darker but still cute.",
+    "colors": ["#141216", "#a9cf8b", "#e3192f"],
+    "photo": "theme-black-cat",
+    "mods": ["black-cat-decal", "cat-stickers", "tint", "lug-nuts", "dash-cat", "interior-leds"]
+  },
+  {
+    "id": "siamese",
+    "name": "Blu",
+    "about": "Cream, soft gray and ice blue, like Blu. Clean and soft.",
+    "colors": ["#efe6da", "#6f7480", "#a6cdea"],
+    "photo": "theme-siamese",
+    "mods": ["cat-stickers", "cat-decals", "seatbelt-pads", "seat-covers", "valve-caps", "cat-ears"]
+  },
+  {
+    "id": "rilakkuma",
+    "name": "Rilakkuma",
+    "about": "Brown bear, cream and a little yellow. Cozy inside, plain outside.",
+    "colors": ["#9b6a3d", "#f3e2c3", "#f5c84c"],
+    "photo": "theme-rilakkuma",
+    "mods": ["rilakkuma", "seat-covers", "floor-mats", "fresheners", "omamori", "miffy"]
+  },
+  {
+    "id": "hello-kitty",
+    "name": "Hello Kitty",
+    "about": "Red car with white and pink Hello Kitty stuff. It basically already matches.",
+    "colors": ["#e3192f", "#ffffff", "#ff8cc1"],
+    "photo": "hk-decals",
+    "mods": ["hk-decals", "hk-steering", "hk-seat-covers", "hk-plush", "valve-caps"]
+  },
+  {
+    "id": "kuromi",
+    "name": "Kuromi",
+    "about": "Pink and black to go with the dark soft top. Cute with a little edge.",
+    "colors": ["#1b1b1f", "#ff7eb6", "#a782d6"],
+    "photo": "sanrio",
+    "mods": ["sanrio", "lug-nuts", "calipers", "tint", "interior-leds"]
+  },
+  {
+    "id": "sakura",
+    "name": "Sakura",
+    "about": "Cherry blossoms, soft pink, and a good luck charm from a shrine. Very Japanese, like the car.",
+    "colors": ["#ffc8da", "#ffffff", "#e3192f"],
+    "photo": "theme-sakura",
+    "mods": ["flower-decals", "fresheners", "mirror-charm", "omamori", "plate-frame"]
+  }
+]

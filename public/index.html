@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanna's Beat</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%23ff7eb6'%3E%3Cellipse cx='32' cy='42' rx='14' ry='12'/%3E%3Cellipse cx='14' cy='26' rx='6' ry='8'/%3E%3Cellipse cx='26' cy='15' rx='6' ry='8'/%3E%3Cellipse cx='38' cy='15' rx='6' ry='8'/%3E%3Cellipse cx='50' cy='26' rx='6' ry='8'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="sky" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="horizon"></div>
+  </div>
+
+  <header class="nav">
+    <a class="logo" href="#top">
+      <svg class="logo-cat" viewBox="0 0 64 64" aria-hidden="true"><use href="#cat-head"/></svg>
+      <span><span data-name>Hanna</span>'s <em>Beat</em></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#mods">Mods</a>
+      <a href="#looks">Looks</a>
+      <a href="#parts">Parts</a>
+      <a href="#shops">Shops</a>
+      <a href="#news">News</a>
+      <a href="#build">List <span class="badge" id="build-count">0</span></a>
+    </nav>
+    <button class="btn btn-pink refresh-btn" type="button" data-refresh>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Refresh</span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Honda Beat &middot; PP1</p>
+        <h1><span data-name>Hanna</span>'s <em>Beat</em></h1>
+        <p class="lede">
+          Mod ideas, prices, and parts for sale for your car.
+          Hit refresh whenever you want to check for new stuff.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-pink" href="#mods">Mods</a>
+          <a class="btn btn-ghost" href="#parts">Parts for sale</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="frame">
+          <img src="img/car/forest-side.png" alt="red Honda Beat parked in the woods">
+        </div>
+        <button class="sit-cat" type="button" aria-label="pet the cat">
+          <svg viewBox="0 0 64 64"><use href="#cat-sit"/></svg>
+          <span class="bubble" role="status"></span>
+        </button>
+        <div class="lamp" aria-hidden="true"><span></span></div>
+        <div class="hero-snap"><img class="snap" src="img/cats/black-cat.webp" alt="Ahna"></div>
+      </div>
+    </section>
+
+    <section id="mods" class="section">
+      <img class="side-snap left" src="img/car/pump-side.png" alt="your car from the side" style="--top:2%;--tilt:-4deg" loading="lazy">
+      <img class="side-snap right" src="img/cats/siamese.webp" alt="Blu" style="--top:16%;--tilt:4deg" loading="lazy">
+      <img class="side-snap left" src="img/car/forest-front.webp" alt="your car in the woods" style="--top:32%;--tilt:3deg" loading="lazy">
+      <img class="side-snap right" src="img/cats/black-cat-pets.webp" alt="Ahna getting pets" style="--top:48%;--tilt:-3deg" loading="lazy">
+      <img class="side-snap left" src="img/car/pump-front.png" alt="your car at the gas station at night" style="--top:64%;--tilt:-2deg" loading="lazy">
+      <img class="side-snap right" src="img/car/forest-side.png" alt="your car in the woods from the side" style="--top:80%;--tilt:3deg" loading="lazy">
+      <div class="section-head">
+        <h2>Mods</h2>
+        <p>
+          Engine stuff, looks, inside stuff, cute stuff and cat stuff. The prices are rough, the listings further down show real prices.
+          The paws are how hard it is. 1 is easy, 3 is probably a shop job. Tap a picture to see it bigger.
+        </p>
+      </div>
+
+      <div class="chips" id="mod-filters" role="tablist" aria-label="filter mods"></div>
+      <div class="mod-grid" id="mod-grid"></div>
+    </section>
+
+    <section id="looks" class="section">
+      <img class="side-snap left" src="img/cats/black-cat.webp" alt="Ahna" style="--top:18%;--tilt:4deg" loading="lazy">
+      <div class="section-head">
+        <h2>Looks to try</h2>
+        <p>A few themes that put some of the mods together. Add a whole look to your list in one go.</p>
+      </div>
+      <div class="theme-grid" id="theme-grid"></div>
+    </section>
+
+    <section id="parts" class="section">
+      <img class="side-snap right" src="img/car/pump-side.png" alt="your car from the side" style="--top:8%;--tilt:-3deg" loading="lazy">
+      <div class="section-head row">
+        <div>
+          <h2>Parts for sale</h2>
+          <p>From eBay sellers in the US, and PP1 Beat, a store just for Beats that ships to the US with no duties. <span id="updated-note"></span></p>
+        </div>
+        <button class="btn btn-pink" type="button" data-refresh>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Refresh</span>
+        </button>
+      </div>
+
+      <div class="progress" id="progress" hidden>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+          <svg class="progress-cat" id="progress-cat" viewBox="0 0 80 48" aria-hidden="true"><use href="#cat-walk"/></svg>
+        </div>
+        <p class="progress-label" id="progress-label">Starting...</p>
+      </div>
+
+      <div class="ebay-banner" id="ebay-banner" hidden>
+        <span>eBay isn't connected yet, so this only shows PP1 Beat for now.</span>
+        <button type="button" class="small-btn add" id="show-setup">Connect eBay</button>
+      </div>
+
+      <form class="ebay-setup" id="ebay-setup" hidden>
+        <h3>Connect eBay (one time)</h3>
+        <p>This part needs a free eBay developer key. It takes about 5 minutes:</p>
+        <ol>
+          <li>Go to <a href="https://developer.ebay.com" target="_blank" rel="noopener">developer.ebay.com</a>, sign in with any eBay account and join the developer program. It's free.</li>
+          <li>Open <b>Application Keys</b> and create a <b>Production</b> keyset. Name it whatever.</li>
+          <li>Still on Application Keys, click <b>Notifications</b> next to the Production keyset. With <b>Marketplace Account Deletion</b> selected, turn on <b>Exempted from Marketplace Account Deletion</b>, pick <b>I do not persist eBay data</b> and submit. Leave the email, endpoint and token boxes empty. If you skip this, eBay marks the keys <b>Non Compliant</b> and they won't work.</li>
+          <li>Copy the <b>App ID</b> and <b>Cert ID</b> into the boxes below.</li>
+        </ol>
+        <div class="fields">
+          <label>App ID (Client ID)<input name="clientId" autocomplete="off" spellcheck="false" required></label>
+          <label>Cert ID (Client Secret)<input name="clientSecret" type="password" autocomplete="off" spellcheck="false" required></label>
+          <label>Zip code <small>(optional, for shipping prices)</small><input name="zip" inputmode="numeric" maxlength="5" autocomplete="off"></label>
+        </div>
+        <div class="setup-actions">
+          <button class="btn btn-pink" type="submit">Save</button>
+          <span class="setup-msg" id="setup-msg"></span>
+        </div>
+        <p class="hint">The keys get saved in <code>data/ebay.json</code> on this computer. That file is gitignored so it won't end up on GitHub.</p>
+      </form>
+
+      <div class="toolbar" id="parts-toolbar">
+        <label class="select">
+          <span>Store</span>
+          <select id="source-select">
+            <option value="all">All stores</option>
+            <option value="ebay">eBay (US sellers)</option>
+            <option value="pp1beat">PP1 Beat</option>
+          </select>
+        </label>
+        <label class="select">
+          <span>Part</span>
+          <select id="mod-select"><option value="all">All parts</option></select>
+        </label>
+        <label class="select">
+          <span>Sort</span>
+          <select id="sort-select">
+            <option value="default">Default</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="listing-grid" id="listing-grid"></div>
+      <button class="btn btn-ghost more-btn" id="parts-more" type="button" hidden>Show more</button>
+      <p class="hint">
+        eBay results are only sellers located in the US. PP1 Beat ships from Toronto with no duties for the US.
+        <button type="button" class="link-btn" id="change-keys" hidden>Change eBay keys</button>
+      </p>
+    </section>
+
+    <section id="shops" class="section">
+      <img class="side-snap left" src="img/cats/siamese.webp" alt="Blu" style="--top:10%;--tilt:-4deg" loading="lazy">
+      <div class="section-head">
+        <h2>Where to buy</h2>
+        <p>Every site I found that sells parts for the Beat, plus a few for the cosmetic stuff.</p>
+      </div>
+      <div class="shop-grid" id="shop-grid"></div>
+    </section>
+
+    <section id="news" class="section">
+      <img class="side-snap right" src="img/car/forest-front.webp" alt="your car in the woods" style="--top:6%;--tilt:3deg" loading="lazy">
+      <div class="section-head">
+        <h2>News</h2>
+        <p>Honda Beat articles from Google News.</p>
+      </div>
+      <div class="news-list" id="news-list"></div>
+      <button class="btn btn-ghost more-btn" id="news-more" type="button" hidden>Show more</button>
+    </section>
+
+    <section id="build" class="section">
+      <img class="side-snap left" src="img/cats/black-cat-pets.webp" alt="Ahna getting pets" style="--top:4%;--tilt:3deg" loading="lazy">
+      <div class="section-head row">
+        <div>
+          <h2>Your list</h2>
+          <p>Add mods or parts with the + button. Check them off when they're done.</p>
+        </div>
+        <div class="build-total">
+          <span>Total</span>
+          <strong id="build-total">$0</strong>
+        </div>
+      </div>
+      <ul class="build-list" id="build-list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <svg class="footer-cat" viewBox="0 0 96 56" aria-hidden="true"><use href="#cat-sleep"/></svg>
+    <p class="made">made for <span data-name>Hanna</span></p>
+    <p class="credits">Parts from eBay and pp1beat.com. News from Google News. Mod photos from Wikimedia Commons.</p>
+    <details class="photo-credits">
+      <summary>Photo credits</summary>
+      <ul id="credits-list"></ul>
+    </details>
+  </footer>
+
+  <!-- walks across the bottom of the screen every so often -->
+  <button class="walker" id="walker" type="button" aria-label="cat">
+    <svg viewBox="0 0 80 48"><use href="#cat-walk"/></svg>
+    <span class="bubble"></span>
+  </button>
+
+  <div class="lightbox" id="lightbox" hidden><img alt=""></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- cat drawings, reused with <use> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="cat-head" viewBox="0 0 64 64">
+        <path fill="currentColor" d="M10 8 L24 20 Q32 17 40 20 L54 8 L54 34 Q54 56 32 56 Q10 56 10 34 Z"/>
+        <ellipse cx="23" cy="35" rx="3.2" ry="4.2" fill="var(--eye, #241c4d)"/>
+        <ellipse cx="41" cy="35" rx="3.2" ry="4.2" fill="var(--eye, #241c4d)"/>
+        <path d="M29 43 L32 46 L35 43 Z" fill="var(--eye, #241c4d)"/>
+      </symbol>
+
+      <symbol id="cat-sit" viewBox="0 0 64 64">
+        <path fill="currentColor" d="M52 58 C62 56 62 44 54 40 C58 46 56 52 50 53 Z"/>
+        <path fill="currentColor" d="M22 30 C14 38 12 50 16 60 L48 60 C52 50 50 38 42 30 Z"/>
+        <path fill="currentColor" d="M19 6 L26 15 Q32 13 38 15 L45 6 L46 22 Q46 34 32 34 Q18 34 18 22 Z"/>
+        <ellipse cx="27" cy="22" rx="2" ry="3" fill="var(--eye, #ffd36e)"/>
+        <ellipse cx="37" cy="22" rx="2" ry="3" fill="var(--eye, #ffd36e)"/>
+      </symbol>
+
+      <symbol id="cat-walk" viewBox="0 0 80 48">
+        <path class="tail" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M14 22 C6 18 4 8 10 4"/>
+        <rect class="leg leg-a" x="20" y="28" width="5" height="16" rx="2.5" fill="currentColor"/>
+        <rect class="leg leg-b" x="27" y="28" width="5" height="16" rx="2.5" fill="currentColor"/>
+        <rect class="leg leg-a" x="46" y="28" width="5" height="16" rx="2.5" fill="currentColor"/>
+        <rect class="leg leg-b" x="53" y="28" width="5" height="16" rx="2.5" fill="currentColor"/>
+        <ellipse cx="38" cy="25" rx="24" ry="10" fill="currentColor"/>
+        <path fill="currentColor" d="M56 10 L60 2 L64 9 Q67 8 70 9 L74 2 L77 12 Q79 24 67 25 Q56 25 56 16 Z"/>
+        <circle cx="65" cy="15" r="1.4" fill="var(--eye, #ffd36e)"/>
+        <circle cx="72" cy="15" r="1.4" fill="var(--eye, #ffd36e)"/>
+      </symbol>
+
+      <symbol id="cat-walk-siamese" viewBox="0 0 80 48">
+        <path class="tail" fill="none" stroke="#6f7480" stroke-width="4" stroke-linecap="round" d="M14 22 C6 18 4 8 10 4"/>
+        <rect class="leg leg-a" x="20" y="28" width="5" height="16" rx="2.5" fill="#6f7480"/>
+        <rect class="leg leg-b" x="27" y="28" width="5" height="16" rx="2.5" fill="#6f7480"/>
+        <rect class="leg leg-a" x="46" y="28" width="5" height="16" rx="2.5" fill="#6f7480"/>
+        <rect class="leg leg-b" x="53" y="28" width="5" height="16" rx="2.5" fill="#6f7480"/>
+        <ellipse cx="38" cy="25" rx="24" ry="10" fill="#efe6da"/>
+        <path fill="#6f7480" d="M56 10 L60 2 L64 9 Q67 8 70 9 L74 2 L77 12 Q79 24 67 25 Q56 25 56 16 Z"/>
+        <circle cx="65" cy="15" r="1.4" fill="#a6cdea"/>
+        <circle cx="72" cy="15" r="1.4" fill="#a6cdea"/>
+      </symbol>
+
+      <symbol id="paw" viewBox="0 0 64 64">
+        <ellipse cx="32" cy="42" rx="14" ry="12" fill="currentColor"/>
+        <ellipse cx="13" cy="27" rx="6" ry="8" fill="currentColor"/>
+        <ellipse cx="25" cy="15" rx="6" ry="8" fill="currentColor"/>
+        <ellipse cx="39" cy="15" rx="6" ry="8" fill="currentColor"/>
+        <ellipse cx="51" cy="27" rx="6" ry="8" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="cat-sleep" viewBox="0 0 96 56">
+        <path fill="currentColor" d="M8 50 C2 30 22 14 48 16 C72 18 92 30 88 50 Z"/>
+        <path fill="currentColor" d="M64 22 L68 8 L74 18 Q78 17 82 19 L88 8 L90 24 Q92 36 78 38 Q64 38 64 28 Z"/>
+        <path d="M70 29 q3 2 6 0 M80 29 q3 2 6 0" stroke="var(--eye, #241c4d)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" d="M10 48 C20 54 40 54 52 50"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

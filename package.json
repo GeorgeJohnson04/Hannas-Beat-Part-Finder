@@ -1,0 +1,14 @@
+{
+  "name": "hannas-beat",
+  "version": "1.0.0",
+  "description": "A little local site for planning mods on a red Honda Beat (PP1)",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
